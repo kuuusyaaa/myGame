@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Best tetris ever</title>
+    <link href="tetris.css" rel="stylesheet"/>
+    <link rel="icon" href="C:\Users\tokar\OneDrive\Desktop\uni\media_tetyuev\myGame\block.ico" type="image/x-icon">
+</head>
+<body>
+<audio id="placeSound" src="placeFigure.mp3" preload="auto"></audio>
+<audio id="winSound" src="winSound.mp3" preload="auto"></audio>
+<audio id="loseSound" src="loseSound.mp3" preload="auto"></audio>
+<canvas id="field" width="400" height="800"></canvas>
+<div class="container" id="blocks">
+    <h1>Next figure:</h1>
+    <canvas id="nextFigure" width="200" height="200"></canvas>
+    <h2>Your score: <span id="score">0</span></h2>
+    <h2>Lines destroyed: <span id="linesDestroyed">0</span></h2>
+    <h2>Hotkeys:</h2>
+    <ul>
+        <li>← / → - Move figure</li>
+        <li>↑ - Rotate figure</li>
+        <li>↓ - Drop figure</li>
+        <li>Whitespace - Pause</li>
+    </ul>
+</div>
+<div id="start-window">
+    <h1>Welcome to the best Tetris!</h1>
+    <input type="text" id="userGoal" placeholder="Enter your goal here"/>
+    <button id="play" onclick="startWithGoal()">Play</button>
+    <br>
+    <h3>or</h3>
+    <br>
+    <button id="infinity-mode" onClick="startGame()">Use the endless mode</button>
+</div>
+<div id="win-window">
+    <h1>You're the best!</h1>
+    <button id="playAgain" onclick="location.reload()">Play again</button>
+</div>
+<div id="lose-window">
+    <h1>Don't cry, try again!</h1>
+    <button id="playAgain1" onclick="location.reload()">Play again</button>
+</div>
+<div id="pause-window">
+    <h1>Game paused</h1>
+</div>
+<script src="tetris.js"></script>
+</body>
+</html>
